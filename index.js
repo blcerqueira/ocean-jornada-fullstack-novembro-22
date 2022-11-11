@@ -108,7 +108,7 @@ app.delete("/itens/:id", async function (req, res){
     res.send("Item apagado com sucesso");
 })
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log("O servidor esta sendo lido em http://LocalHost:3000");
 });
 }
