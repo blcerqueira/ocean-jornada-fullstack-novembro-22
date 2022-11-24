@@ -96,8 +96,7 @@ app.put("/itens/:id", async function (req, res){
     await collection.updateOne({
         _id: new ObjectId(id)}, {$set: item}
     );
-
-    res.send({ messagem: "Item atualizado com sucesso" });
+    res.send({ message: "Item atualizado com sucesso" });
 })
 
 // Endpoint [DELETE] /itens/:id - DELETE BY ID (Remover pelo ID)

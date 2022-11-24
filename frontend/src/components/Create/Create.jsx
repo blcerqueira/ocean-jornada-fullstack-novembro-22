@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import { Api } from "../../api/api";
 import "./Create.css"
 
 function Create() {
+    const navigate = useNavigate();
+
     async function processarSubmit(event) {
         event.preventDefault();
 
@@ -18,7 +21,12 @@ function Create() {
         const createUrl = Api.itens.create();
         const response = await Api.buildApiPostRequest(createUrl, payload);
         const body = await response.json();
-        console.log(body);
+        if (response.status === 200) {
+            alert(body.message);
+            navigate("/");
+        } else {
+            alert("Algum erro ocorreu, tente novamente.");
+        }
     }
 
     return (
