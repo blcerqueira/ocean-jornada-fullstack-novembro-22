@@ -1,6 +1,6 @@
 export const Api = {
-    baseUrl: "http://localhost:3000/",
-    //baseUrl: "https://ocean-jornada-fullstack-novembro-22.onrender.com/",
+    // baseUrl: "http://localhost:3000/",
+    baseUrl: "https://ocean-jornada-fullstack-novembro-22.onrender.com/",
 
         itens: {
             endpoint: function () {
