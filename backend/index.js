@@ -59,7 +59,7 @@ app.post("/itens", async function (req, res){
     const item = req.body;
     // Inserir o valor recebido na collection
     await collection.insertOne(item);
-    res.send("Item criado com sucesso!");
+    res.send({ message: "Item criado com sucesso!" });
 });
 
 // Endpoint [GET] /itens/:id - READ BY ID (Ler pelo ID)
@@ -97,7 +97,7 @@ app.put("/itens/:id", async function (req, res){
         _id: new ObjectId(id)}, {$set: item}
     );
 
-    res.send("Item atualizado com sucesso");
+    res.send({ messagem: "Item atualizado com sucesso" });
 })
 
 // Endpoint [DELETE] /itens/:id - DELETE BY ID (Remover pelo ID)
@@ -110,7 +110,7 @@ app.delete("/itens/:id", async function (req, res){
         _id: new ObjectId(id)
     })
     // Exibir a mensagem com sucesso
-    res.send("Item apagado com sucesso");
+    res.send({ message: "Item apagado com sucesso" });
 })
 
 app.listen(process.env.PORT || 3000, function () {

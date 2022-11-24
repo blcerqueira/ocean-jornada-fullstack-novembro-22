@@ -10,6 +10,9 @@ export const Api = {
                 return this.endpoint() + "/";
 
             },
+            create: function(){
+                return this.endpoint() + "/";
+            },
         },
 
         // Montar as requisições
@@ -17,6 +20,17 @@ export const Api = {
         buidApiGetRequest: function (url) {
             return fetch(url, {
                 method: "GET",
+            });
+        },
+
+        //Montar um POST
+        buildApiPostRequest: function(url, body) {
+            return fetch(url, {
+                method: "POST",
+                body: JSON.stringify(body),
+                headers: new Headers({
+                    "Content-type": "application/json",
+                }),
             });
         },
         
