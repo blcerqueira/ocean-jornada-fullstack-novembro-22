@@ -1,5 +1,7 @@
 const express = require('express');
 const { MongoClient, ObjectId, Collection } = require("mongodb");
+const cors = require("cors");
+
 
 //const url = "mongodb://localhost:27017";
 //const url = "mongodb://127.0.0.1:27017";
@@ -20,6 +22,9 @@ async function main() {
 
 
 const app = express();
+
+// Configuração do CORS
+app.use(cors());
 
 // Sinalizamos que estamos usando o JSON no BODY
 

@@ -1,0 +1,14 @@
+.Footer {
+    background: #ECECEC;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ;
+}
+.Footer a {
+    color: black;
+    margin: 1rem;
+    font-size: 1.2rem;
+}

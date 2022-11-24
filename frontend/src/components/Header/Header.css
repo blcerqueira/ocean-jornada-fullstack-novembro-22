@@ -1,0 +1,13 @@
+.Header {
+    background: #0042BE;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+
+    ;
+}
+.Header a {
+    color: #ffffff;
+    margin: 1rem;
+    font-size: 1.2rem;
+}
