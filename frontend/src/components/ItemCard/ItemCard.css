@@ -18,7 +18,7 @@
     transform: scale (1.02);
 }
 
-.ItemCard h1 {
+.ItemCard h2 {
     border-left: 0.4rem solid #00a7e2;
     text-align: left;
     padding: 1rem;

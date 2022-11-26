@@ -1,6 +1,6 @@
 import "./ItemCard.css"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons"
 import { Api } from "../../api/api";
 import { useNavigate } from "react-router-dom";
@@ -10,11 +10,11 @@ function ItemCard(props) {
 
     const navigate = useNavigate();
 
-async function excluirItem(){
-    if (!confirm("Tem certeza que deseja exluir esse equipamento?")){
-    // colocar um retorn vazio encerra a funcao
-    return;
-    }
+async function excluirItem() {
+    if (!confirm("Tem certeza que deseja exluir esse equipamento?")) {
+        // colocar um retorn vazio encerra a funcao
+        return;
+        }
 
     const deleteUrl = Api.itens.delete(item._id);
     const response = await Api.buildApiDeleteRequest(deleteUrl);
@@ -31,7 +31,7 @@ async function excluirItem(){
     return (
     <div className="ItemCard">
         <FontAwesomeIcon onClick={excluirItem} className="icon-delete" icon={faTrashCan} />
-        <h1> {item.nome} </h1>
+        <h2>{item.nome}</h2>
         <img src={item.imagemUrl} alt={"Imagem do " + item.nome} width={200} />
     </div>
     )

@@ -31,7 +31,7 @@ app.use(cors());
 app.use(express.json());
 
 // Endpoint prinicial
-app.get('/', function (req, res) {
+app.get("/", function (req, res) {
   res.send('Hello World, How Are You?')
 })
 
@@ -72,7 +72,7 @@ app.get("/itens/:id", async function (req, res) {
     //Realizamos uma busca no banco de dados, FindOne, pois é ID é unico
     //e é um unico documento
     const item = await collection.findOne({
-        _id: new ObjectId(id)
+        _id: new ObjectId(id),
     });
 
     //Exibimos o item encontrado
@@ -97,7 +97,7 @@ app.put("/itens/:id", async function (req, res){
         _id: new ObjectId(id)}, {$set: item}
     );
     res.send({ message: "Item atualizado com sucesso" });
-})
+});
 
 // Endpoint [DELETE] /itens/:id - DELETE BY ID (Remover pelo ID)
 app.delete("/itens/:id", async function (req, res){
@@ -106,11 +106,11 @@ app.delete("/itens/:id", async function (req, res){
     //Remove um item da lista
     //delete itens[id]
     await collection.deleteOne({
-        _id: new ObjectId(id)
-    })
+        _id: new ObjectId(id),
+    });
     // Exibir a mensagem com sucesso
     res.send({ message: "Item apagado com sucesso" });
-})
+});
 
 app.listen(process.env.PORT || 3000, function () {
     console.log("O servidor esta sendo lido em http://LocalHost:3000");

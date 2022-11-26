@@ -32,18 +32,35 @@ function Create() {
     return (
     <div className="Create">
             <form onSubmit={processarSubmit}>
-                <div>
+                <div className="label_div">
                     <label htmlFor="nome">Nome:</label>
+                </div>
+                    <div>
                     <input type="text" id="nome" />
-                </div>
-                <div>
+                    </div>
+                
+                <div className="label_div">
                 <label htmlFor="imagemUrl">URL da Imagem:</label>
-                <input type="text" id="imagemUrl" />
                 </div>
-                <div>
-                    <input type="submit" value="Adicionar" />
+
+                    <div>
+                    <input type="text" id="imagemUrl" />
+                    </div>
+
+                <div className="botao">
+                <input className="botao_dentro" type="submit" value="Adicionar" />
                 </div>
             </form>
+            <div>
+            <ul>
+                <li>TRATOR</li>
+                <b>https://www.deere.com.br/assets/images/region-3/products/tractors/large/7j-series/trator_7j_large_f688f995385ce4bcabbc91c88164c9c45195d8d3.png</b>
+                <li>MOTOCANA</li>
+                <b>http://sc04.alicdn.com/kf/HTB1H6JSbeuSBuNjSszi762q8pXaE.png</b>
+                <li>CAMINHÃO</li>
+                <b>https://www.savana.com.br/img/caminhoes/axor.png</b>
+            </ul>
+            </div>
     </div>
 )
     }

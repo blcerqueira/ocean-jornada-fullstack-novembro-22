@@ -1,0 +1,44 @@
+.Create {
+    background: #ECECEC;
+    margin-top: 1rem;
+
+}
+.Create form {
+      color: black;
+      align-items: center;
+      padding: 2rem;
+}
+.Create input {
+    width: 30rem;
+    color: #0042BE;
+    font-weight: bold;
+}
+.Create div.label_div{
+    padding-top: 1rem;
+}
+
+.Create div.input{
+    border: nome;
+}
+
+.Create div.botao {
+    padding-top: 1rem;
+
+}
+
+.Create input.botao_dentro {
+
+    color: #0042BE;
+    width: 30rem;
+    border: none;
+    background-color: #dadada;
+    padding: 0.4rem;
+
+}
+
+.Create label {
+    font-family: "Roboto", sans-serif;
+    color: #0042BE;
+    margin-top: 5rem;
+    font-weight: bold;
+}

@@ -26,9 +26,9 @@ function ReadAll() {
     const [itens, setItens] = useState();
 
     async function realizarRequisicao() {
-    const ReadAllUrl = Api.itens.readAll();
-    console.log(ReadAllUrl);
-    const response = await Api.buidApiGetRequest(ReadAllUrl);
+    const readAllUrl = Api.itens.readAll();
+
+    const response = await Api.buildApiGetRequest(readAllUrl);
         
     const resultado = await response.json();
     console.log({resultado});
@@ -43,7 +43,7 @@ useEffect(function () {
 
 
 if (itens === undefined) {
-    return <div>Carregando ...</div>
+    return <div>Carregando...</div>;
 }
 
      return (
